@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcx1qkupmrblj"]
+
+[ext_resource type="PackedScene" uid="uid://dkixvkxsy2p1y" path="res://scene/player.tscn" id="1_f74g4"]
+[ext_resource type="PackedScene" uid="uid://v41ti7jcqqb" path="res://scene/level.tscn" id="2_2m7pb"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_f74g4")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -98)
+
+[node name="Level" parent="." instance=ExtResource("2_2m7pb")]

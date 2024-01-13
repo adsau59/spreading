@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Spreading"
-run/main_scene="res://game.tscn"
+run/main_scene="res://scene/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://sprite/icon.svg"
 
 [autoload]
 
-btn="*res://btn.gd"
+btn="*res://script/btn.gd"
 
 [input]
 
