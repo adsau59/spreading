@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcx1qkupmrblj"]
+[gd_scene load_steps=4 format=3 uid="uid://bcx1qkupmrblj"]
 
 [ext_resource type="PackedScene" uid="uid://dkixvkxsy2p1y" path="res://scene/player.tscn" id="1_f74g4"]
 [ext_resource type="PackedScene" uid="uid://v41ti7jcqqb" path="res://scene/level.tscn" id="2_2m7pb"]
+[ext_resource type="Script" path="res://scene/PlayerHealth.gd" id="3_e8ct0"]
 
 [node name="Game" type="Node2D"]
 
@@ -10,4 +11,15 @@
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -98)
 
+[node name="ProgressBar" type="ProgressBar" parent="Player" node_paths=PackedStringArray("player")]
+offset_left = -565.0
+offset_top = -411.0
+offset_right = -299.0
+offset_bottom = -379.0
+script = ExtResource("3_e8ct0")
+player = NodePath("..")
+
 [node name="Level" parent="." instance=ExtResource("2_2m7pb")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
